@@ -1,9 +1,7 @@
-from functions.write_file import write_file as write 
+from functions.run_python_file import run_python_file as run
 
-print(write("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
-
-print(write("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
-
-print(write("calculator", "/tmp/temp.txt", "this should not be allowed"))
-
-
+print(run("calculator", "main.py"))
+print(run("calculator", "main.py", ["3 + 5"]))
+print(run("calculator", "tests.py"))
+print(run("calculator", "../main.py"))
+print(run("calculator", "nonexistent.py"))
